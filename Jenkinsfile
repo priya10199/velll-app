@@ -2,18 +2,18 @@ pipeline{
      agent{
        label{
          label "buit-in"
-         customWorkspace "/mnt/myproject"
+         customWorkspace "/mnt/my project"
         }
      }
        stages{
-         stage("stage-1"){
+         stage("deploy"){
          steps{
-         sh "mkdir test"
+         sh "cp -r index.html /var/www/html/index.html"
          }
      }
-        stage("stage-2"){
+        stage("start"){
         steps{
-        sh "mkdir folder"
+        sh "service httpd start"
           }
      } 
   }
