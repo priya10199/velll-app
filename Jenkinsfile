@@ -16,7 +16,6 @@ pipeline{
         sh "mkdir folder"
           }
      } 
-}
-
-         
+  }
+}       
          
