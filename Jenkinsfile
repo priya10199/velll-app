@@ -8,13 +8,12 @@ pipeline{
        stages{
          stage("deploy"){
          steps{
-         sh "cp -r index.html /var/www/html/index.html/"
-         sh "chmod -R 777 /var/www/html/index.html"
+         echo "hello this is 22Q1 branch"
          }
      }
         stage("start"){
         steps{
-        sh "service httpd start"
+        echo "this is master 22Q1 branch"
           }
      } 
   }
